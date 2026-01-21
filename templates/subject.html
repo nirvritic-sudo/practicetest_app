@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Practice Test Generator</title>
+
+
+  <style>
+       * { box-sizing: border-box; }
+
+
+       body {
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           display: flex; justify-content: center; align-items: center;
+           min-height: 100vh; margin: 0; background-color: #f4f4f9; padding: 20px 0;
+       }
+       h1 { font-size: 1.5rem; color: #333; margin-top: 0; }
+       .box h1 { color: white; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+
+
+       .start-button {
+           background-color: #007bff; color: white; border: none; padding: 15px 30px;
+           font-size: 1.2rem; font-weight: bold; border-radius: 8px; cursor: pointer;
+           width: 80%; margin-top: 15px; transition: background-color 0.3s;
+       }
+       .start-button:hover { background-color: #0056b3; }
+
+
+       .box-container {
+           display: grid; grid-template-columns: repeat(3, 400px); gap: 40px;
+           padding: 20px; justify-content: center; align-items: start;
+       }
+
+
+       .box {
+           width: 400px; min-height: 250px; padding-bottom: 20px;
+           background-color: #87aec9; color: white;
+           display: flex; flex-direction: column; justify-content: center; align-items: center;
+           position: relative; border: 4px solid darkslategray; border-radius: 15px;
+           box-shadow: inset 2px 2px 2px #777, inset -2px -2px 2px #ffffff;
+       }
+
+
+       /* --- DROPDOWN STYLES --- */
+       .topic-btn {
+           background-color: #7b40f2; color: white; border: none; padding: 10px 20px;
+           font-size: 1rem; font-weight: 600; border-radius: 6px; cursor: pointer;
+           width: 80%;
+           display: flex; justify-content: space-between; align-items: center;
+           margin-bottom: 5px;
+       }
+       .topic-content {
+           display: none; width: 80%;
+           background-color: #f8f0ff; border-radius: 6px;
+           max-height: 200px; overflow-y: auto; text-align: left; padding: 10px;
+           box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #dcdcdc;
+           margin-bottom: 15px;
+       }
+       .topic-content.show { display: block; }
+       .checkbox-label { display: flex; align-items: start; color: #333; padding: 5px 0; border-bottom: 1px solid #eedeed; }
+       .checkbox-label input { margin-right: 10px; margin-top: 3px; }
+
+
+       /* --- SLIDER STYLES --- */
+       .slider-container { width: 80%; margin: 10px 0 15px 0; text-align: center; }
+       .slider-label-title {
+           font-weight: bold; margin-bottom: 10px; display: block;
+           text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+       }
+       input[type=range] {
+           -webkit-appearance: none; width: 100%; height: 8px; border-radius: 5px;
+           background: #e9ecef; outline: none; opacity: 0.9; transition: opacity .2s;
+       }
+       input[type=range]::-webkit-slider-thumb {
+           -webkit-appearance: none; appearance: none;
+           width: 22px; height: 22px; border-radius: 50%; background: #7b40f2;
+           cursor: pointer; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+       }
+       .slider-labels {
+           display: flex; justify-content: space-between; font-size: 0.85rem;
+           margin-top: 8px; font-weight: 500;
+       }
+
+
+       /* --- PROGRESS BAR --- */
+       .progress-container { display: none; width: 80%; margin-top: 15px; text-align: center; }
+       .progress-label { font-size: 0.9rem; margin-bottom: 5px; color: #fff; }
+       .progress-bar-bg { width: 100%; height: 10px; background-color: rgba(255, 255, 255, 0.3); border-radius: 5px; overflow: hidden; position: relative; }
+       .progress-bar-fill { height: 100%; width: 50%; background-color: #007bff; border-radius: 5px; position: absolute; left: -50%; animation: indeterminate 1.5s infinite linear; }
+       @keyframes indeterminate { 0% { left: -50%; width: 50%; } 50% { left: 25%; width: 50%; } 100% { left: 100%; width: 50%; } }
+   </style>
+</head>
+<body>
+   <div class="box-container">
+
+
+        <div class="box">
+            <h1>Physics</h1>
+            <form id="physForm" action="/physics" method="POST" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+
+                <button type="button" class="topic-btn" onclick="toggleTopics('physTopics')">Select Topics <span>&#9662;</span></button>
+                <div id="physTopics" class="topic-content">
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="PHYSICS AND MEASUREMENT"> PHYSICS AND MEASUREMENT</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="KINEMATICS"> KINEMATICS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="LAWS OF MOTION"> LAWS OF MOTION</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="WORK, ENERGY, AND POWER"> WORK, ENERGY, AND POWER</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ROTATIONAL MOTION"> ROTATIONAL MOTION</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="GRAVITATION"> GRAVITATION</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="PROPERTIES OF SOLIDS AND LIQUIDS"> PROPERTIES OF SOLIDS AND LIQUIDS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="THERMODYNAMICS"> THERMODYNAMICS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="KINETIC THEORY OF GASES"> KINETIC THEORY OF GASES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="OSCILLATIONS AND WAVES"> OSCILLATIONS AND WAVES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ELECTROSTATICS"> ELECTROSTATICS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="CURRENT ELECTRICITY"> CURRENT ELECTRICITY</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="MAGNETIC EFFECTS OF CURRENT AND MAGNETISM"> MAGNETIC EFFECTS OF CURRENT AND MAGNETISM</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ELECTROMAGNETIC INDUCTION AND ALTERNATING CURRENTS"> ELECTROMAGNETIC INDUCTION AND ALTERNATING CURRENTS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ELECTROMAGNETIC WAVES"> ELECTROMAGNETIC WAVES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="DUAL NATURE OF MATTER AND RADIATION"> DUAL NATURE OF MATTER AND RADIATION</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ATOMS AND NUCLEI"> ATOMS AND NUCLEI</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="ELECTRONIC DEVICES"> ELECTRONIC DEVICES</label>
+
+
+                </div>
+
+
+                <div class="slider-container">
+                    <label class="slider-label-title">Difficulty Level</label>
+                    <input type="range" min="0" max="2" value="1" class="slider" name="difficulty_val">
+                    <div class="slider-labels"><span>Easy</span><span>Medium</span><span>Hard</span></div>
+                </div>
+
+
+                <button type="submit" class="start-button sub-btn">Start Physics Test</button>
+            </form>
+
+
+            <div id="physProgress" class="progress-container">
+                <div class="progress-label">Generating questions...</div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <h1>Math</h1>
+            <form id="mathForm" action="/math" method="POST" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+                <button type="button" class="topic-btn" onclick="toggleTopics('mathTopics')">Select Topics <span>&#9662;</span></button>
+                <div id="mathTopics" class="topic-content">
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="SETS, RELATIONS, AND FUNCTIONS"> SETS, RELATIONS, AND FUNCTIONS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="TRIGONOMETRY"> TRIGONOMETRY</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="COMPLEX NUMBERS AND QUADRATIC EQUATIONS"> COMPLEX NUMBERS AND QUADRATIC EQUATIONS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="PERMUTATIONS AND COMBINATIONS"> PERMUTATIONS AND COMBINATIONS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="BINOMIAL THEOREM"> BINOMIAL THEOREM</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="SEQUENCE AND SERIES"> SEQUENCE AND SERIES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="LIMITS AND DERIVATIVES"> LIMITS AND DERIVATIVES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="STATISTICS AND PROBABILITY"> STATISTICS AND PROBABILITY</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="STRAIGHT LINES"> STRAIGHT LINES</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="CONIC SECTIONS"> CONIC SECTIONS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="THREE_DIMENSIONAL GEOMETRY"> THREE_DIMENSIONAL GEOMETRY</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="MATRICES AND DETERMINANTS"> MATRICES AND DETERMINANTS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="INTEGRAL CALCULUS"> INTEGRAL CALCULUS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="DIFFERENTIAL EQUATIONS"> DIFFERENTIAL EQUATIONS</label>
+                    <label class="checkbox-label"><input type="checkbox" name="topics" value="VECTOR ALGEBRA"> VECTOR ALGEBRA</label>
+                </div>
+
+
+                <div class="slider-container">
+                    <label class="slider-label-title">Difficulty Level</label>
+                    <input type="range" min="0" max="2" value="1" class="slider" name="difficulty_val">
+                    <div class="slider-labels"><span>Easy</span><span>Medium</span><span>Hard</span></div>
+                </div>
+
+
+                <button type="submit" class="start-button sub-btn">Start Math Test</button>
+            </form>
+
+
+            <div id="mathProgress" class="progress-container">
+                <div class="progress-label">Generating questions...</div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+            </div>
+        </div>
+
+
+        <div class="box">
+           <h1>Chemistry</h1>
+           <form id="chemForm" action="/chemistry" method="POST" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+
+               <button type="button" class="topic-btn" onclick="toggleTopics('chemTopics')">Select Topics <span>&#9662;</span></button>
+               <div id="chemTopics" class="topic-content">
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Atomic Structure"> ATOMIC STRUCTURE</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Chemical Bonding and Molecular Structure"> CHEMICAL BONDING AND MOLECULAR STRUCTURE</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Classification of Elements and Periodicity in Properties"> CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Chemical Thermodynamics"> CHEMICAL THERMODYNAMICS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Equilibrium"> EQUILIBRIUM</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Redox Reactions and Electrochemistry"> REDOX REACTIONS AND ELECTROCHEMISTRY</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Basic Principles of Organic Chemistry"> BASIC PRINCIPLES OF ORGANIC CHEMISTRY</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Hydrocarbons"> HYDROCARBONS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Solutions"> SOLUTIONS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Chemical Kinematics"> CHEMICAL KINETICS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Block Elements"> BLOCK ELEMENTS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="d - and f- Block Elemens"> d - and f- BLOCK ELEMENTS</label>
+                   <label class="checkbox-label"><input type="checkbox" name="topics" value="Co-ordination Compounds"> CO-ORDINATION COMPOUNDS</label>
+
+               </div>
+
+
+               <div class="slider-container">
+                   <label class="slider-label-title">Difficulty Level</label>
+                   <input type="range" min="0" max="2" value="1" class="slider" name="difficulty_val">
+                   <div class="slider-labels"><span>Easy</span><span>Medium</span><span>Hard</span></div>
+               </div>
+
+
+               <button type="submit" class="start-button sub-btn">Start Chemistry Test</button>
+           </form>
+
+
+           <div id="chemProgress" class="progress-container">
+               <div class="progress-label">Generating questions...</div>
+               <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+           </div>
+        </div>
+    </div>
+
+
+    <script>
+       // Generic function to toggle any topic ID passed to it
+       function toggleTopics(elementId) {
+           var content = document.getElementById(elementId);
+           // Close others if you want only one open at a time (optional)
+           // document.querySelectorAll('.topic-content').forEach(el => el.classList.remove('show'));
+           content.classList.toggle("show");
+       }
+
+
+       // Add event listeners to all forms (Physics, Math, Chemistry)
+       // This makes the progress bar work for all of them automatically
+       document.querySelectorAll('form').forEach(form => {
+           form.addEventListener('submit', function(e) {
+               // Find the specific progress container for this form
+               // This assumes the progress div is the next sibling element after the form
+               var progressDiv = this.nextElementSibling;
+               var btn = this.querySelector('.sub-btn');
+
+
+               if(progressDiv && progressDiv.classList.contains('progress-container')) {
+                   progressDiv.style.display = 'block';
+               }
+
+
+               if(btn) {
+                   btn.textContent = "Processing...";
+                   btn.style.opacity = "0.7";
+               }
+           });
+       });
+    </script>
+</body>
+</html>

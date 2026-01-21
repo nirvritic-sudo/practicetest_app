@@ -1,0 +1,92 @@
+
+[
+ {
+   "id": "1",
+   "question": "If \\( n \\) is a positive integer such that the coefficient of \\( x^5 \\) in the expansion of \\( (2 + x)^{n} \\) is 528, what is the value of \\( n \\)?",
+   "options": [
+     "(A) 8",
+     "(B) 9",
+     "(C) 10",
+     "(D) 11"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "2",
+   "question": "A class consists of 10 boys and 8 girls. In how many ways can a committee of 4 be formed such that at least 2 members are girls?",
+   "options": [
+     "(A) 1820",
+     "(B) 1350",
+     "(C) 1280",
+     "(D) 1090"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "3",
+   "question": "If \\( \\sin\\theta + \\cos\\theta = \\dfrac{\\sqrt{6}}{2} \\), then what is the value of \\( \\sin 2\\theta \\)?",
+   "options": [
+     "(A) 1",
+     "(B) \\(\\dfrac{\\sqrt{2}}{2}\\)",
+     "(C) \\(\\dfrac{1}{2}\\)",
+     "(D) \\(\\dfrac{\\sqrt{3}}{2}\\)"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "4",
+   "question": "A bag contains 5 red balls and 7 blue balls. If 4 balls are drawn at random, what is the probability that exactly two of them are red?",
+   "options": [
+     "(A) \\(\\dfrac{35}{99}\\)",
+     "(B) \\(\\dfrac{140}{495}\\)",
+     "(C) \\(\\dfrac{70}{495}\\)",
+     "(D) \\(\\dfrac{105}{495}\\)"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "5",
+   "question": "The sum of all coefficients in the expansion of \\( (1 + x^2 - x^3)^{10} \\) is",
+   "options": [
+     "(A) 1",
+     "(B) 0",
+     "(C) 1024",
+     "(D) -1024"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "6",
+   "question": "There are 8 seats in a row. In how many ways can 4 boys and 4 girls be seated such that no two boys sit together?",
+   "options": [
+     "(A) 576",
+     "(B) 1440",
+     "(C) 1680",
+     "(D) 5040"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "7",
+   "question": "If \\( r \\) is a positive integer for which the ratio of the 4th and the 3rd term in the expansion of \\( (1 + x)^r \\) is \\( \\frac{5}{2} \\), then \\( r \\) equals:",
+   "options": [
+     "(A) 5",
+     "(B) 7",
+     "(C) 9",
+     "(D) 12"
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "8",
+   "question": "If \\( \\sin \\alpha = \\dfrac{3}{5} \\), where \\( 0 < \\alpha < 90^\\circ \\), find the value of \\( 2\\sin \\alpha \\cos \\alpha \\).",
+   "options": [
+     "(A) \\(\\dfrac{12}{25}\\)",
+     "(B) \\(\\dfrac{24}{25}\\)",
+     "(C) \\(\\dfrac{9}{25}\\)",
+     "(D) \\(\\dfrac{6}{25}\\)"
+   ],
+   "Hint": ""
+ }
+]
+

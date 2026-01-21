@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Test Generator</title>
+    <style>
+        html { font-family: 'Inter', sans-serif; }
+        body {
+        background-color: vf7f9fc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+        .container{
+        text-align:center;
+        }
+
+        h1{
+        font-size:2.25rem;
+        font-weight:800;
+        color: #333;
+        }
+        h2{
+        font-size:1.75rem;
+        font-weight:550;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            width: 10.25rem;
+            height: 3.25rem;
+            /*background-color: #1e05fa;*/
+            color: white;
+            font-size:1rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover{
+        background-color: #1902de;
+        width: 10.75rem;
+        height: 3.75rem;
+        font-size:1.25rem;
+        font-weight: 500;
+        box-shadow:[2rem 2rem #000807]; /* shadow-lg equivalent */
+
+        }
+    .box{
+        margin-left:2rem;
+        margin-right:2rem;
+        width:20rem;
+        height:10.5rem;
+        border-radius:8px;
+        background-color:#e8edfc;
+        }
+        .grid{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:auto;
+        margin-top:4.5rem
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Practice Test Creator</h1>
+    <div class="grid">
+    <div class="box">
+        <h2 style="color:#a111fa>;">Physics</h2>
+        <form action="/physics" method="post">
+        <button class="cta-button" style="background-color:#a111fa" name="b1">Create Test</button>
+        </form>
+    </div>
+    <div class="box">
+        <h2 style="color:#3874ff>;">Math</h2>
+        <form action="/math" method="post">
+        <button class="cta-button" style="background-color:#3874ff" name="b2">Create Test</button>
+        </form>
+    </div>
+    <div class="box">
+        <h2 style="color:#fc81f6>;">Chemistry</h2>
+        <form action="/chemistry" method="post">
+        <button class="cta-button" style="background-color:#24bfab">Create Test</button>
+        </form>
+    </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

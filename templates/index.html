@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice test generator</title>
+    <style>
+    html { font-family: 'Inter', sans-serif; }
+    body {
+        background-color: vf7f9fc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0;
+    }
+    .container{
+        text-align:center;
+        max-width:48rem;
+        margin:0,auto;
+    }
+    .title {
+        font-size: 2.25rem; /* text-4xl equivalent */
+        line-height: 2.5rem;
+        font-weight: 800; /* font-extrabold equivalent */
+        letter-spacing: -0.025em; /* tracking-tight equivalent */
+        color: #1e05fa;
+        margin-bottom: 1rem; /* mb-4 equivalent */
+        }
+    .subtitle {
+            font-size: 1.125rem; /* text-lg equivalent */
+            line-height: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 2rem; /* mb-8 equivalent */
+            max-width: 28rem; /* max-w-md equivalent */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            width: 10.25rem;
+            height: 3.25rem;
+            background-color: #1e05fa;
+            color: white;
+            font-size:1rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover{
+        background-color: #1902de;
+        width: 10.75rem;
+        height: 3.75rem;
+        font-size:1.25rem;
+        font-weight: 500;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg equivalent */
+
+        }
+        </style>
+
+
+
+
+
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Practice Test Generator Test</h1>
+    <p class="subtitle">Create personalized practice tests for Mathematics, Physics, and Chemistry. Select your topics and start practicing today!</p>
+    <form action="/subject" method="post">
+    <button class="cta-button">
+        Get Started
+    </button>
+
+</div>
+
+</body>
+</html>

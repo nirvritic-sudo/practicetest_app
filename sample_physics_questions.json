@@ -1,0 +1,91 @@
+[
+ {
+   "id": "1",
+   "question": "A block of mass 5 kg is sliding on a rough horizontal surface (coefficient of kinetic friction μ = 0.2) with an initial speed of 10 m/s. A constant electric force (F = 15 N) acts on the block in the direction of motion. If the block travels a distance d before coming to rest, what is the value of d?",
+   "options": [
+     "(A) ) 15 m",
+     "(B) ) 25 m",
+     "(C) ) 10 m",
+     "(D) ) 20 m  \n\nHint: Account for the work done by friction and the electric force. Use the work-energy theorem."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "2",
+   "question": "A current of 2 A flows through a resistor of 5 Ω. The mechanical force required to move a charge of 10 C through the resistor in the direction of current is:",
+   "options": [
+     "(A) ) 50 N",
+     "(B) ) 100 N",
+     "(C) ) 10 N",
+     "(D) ) 1 N  \n\nHint: Relate work done to electric potential difference and force."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "3",
+   "question": "A metallic block of mass 2 kg is placed on a rough inclined plane angled at 30° with the horizontal (μ = 0.3). An external force F is applied parallel to the incline to just move the block up at constant velocity. If a uniform magnetic field B = 0.5 T acts perpendicular to the incline, and the block carries a current of 4 A along the incline, find the value of F.",
+   "options": [
+     "(A) ) 18 N",
+     "(B) ) 14 N",
+     "(C) ) 20 N",
+     "(D) ) 12 N  \n\nHint: Consider forces due to gravity, friction, and the magnetic force on a current-carrying conductor."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "4",
+   "question": "A particle of mass m moving with velocity \\( v_0 \\) enters a region of length L where a constant retarding force of magnitude F (opposite to motion) and an electric field E (parallel to F) acts. The net work done by all forces on the particle until it comes to rest is:",
+   "options": [
+     "(A) ) 0",
+     "(B) ) –F·L",
+     "(C) ) m\\( v_0^2 \\)/2",
+     "(D) ) –F·L + qEL  \n\nHint: Include work done by both retarding force and electric field."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "5",
+   "question": "A block of mass 1 kg is attached to a horizontal spring (k = 100 N/m) on a smooth surface. It is given a charge of 10–3 C. A uniform electric field E = 1000 N/C is applied in the direction opposite to where the block is initially stretched by 10 cm and released. What is the maximum compression in the spring after release?",
+   "options": [
+     "(A) ) 8 cm",
+     "(B) ) 5 cm",
+     "(C) ) 10 cm",
+     "(D) ) 12 cm  \n\nHint: Use conservation of energy, considering both mechanical and electric potential energies."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "6",
+   "question": "A cart (mass 10 kg) is pulled on a horizontal surface by a constant force of 40 N. The coefficient of friction is 0.4. What is the power delivered by the force when the speed of the cart is 5 m/s?",
+   "options": [
+     "(A) ) 120 W",
+     "(B) ) 50 W",
+     "(C) ) 80 W",
+     "(D) ) 200 W  \n\nHint: Calculate the net acceleration and then use P = Fv for constant velocity."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "7",
+   "question": "A copper wire of length 1 m and radius 1 mm carries a current of 5 A. The wire lies on a rough horizontal table (μ = 0.2, mass per unit length = 0.05 kg/m). If there is a magnetic field of 0.1 T perpendicular to the wire and parallel to the table, what is the minimum applied force needed to move the wire?",
+   "options": [
+     "(A) ) 0.5 N",
+     "(B) ) 0.25 N",
+     "(C) ) 1 N",
+     "(D) ) 0.1 N  \n\nHint: Consider friction and magnetic force on the current-carrying wire."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "8",
+   "question": "A 2 kg block slides down a 30° rough incline (μ = 0.2) of length 10 m starting from rest. It is connected to a 1 Ω resistor by a copper wire. As the block descends, it enters a region with a perpendicular magnetic field of 0.5 T. Find the emf induced in the circuit if it reaches the bottom in 5 seconds.",
+   "options": [
+     "(A) ) 1 V",
+     "(B) ) 2 V",
+     "(C) ) 0.5 V",
+     "(D) ) 0.2 V  \n\nHint: Find the velocity at the bottom, then use e = Bvl. Assume the wire forms a closed loop of length parallel to the incline."
+   ],
+   "Hint": ""
+ }
+]
+

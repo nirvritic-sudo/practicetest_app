@@ -1,0 +1,91 @@
+[
+ {
+   "id": "1",
+   "question": "0.5 mole of X atoms combine with 1 mole of oxygen atoms to form a compound of type XO₂. If the atomic number of X is 12, which of the following statements is true for X in XO₂?",
+   "options": [
+     "(A) X is present in +4 oxidation state",
+     "(B) X has a noble gas configuration in XO₂",
+     "(C) Number of valence electrons in X in XO₂ is 8",
+     "(D) X acts as an oxidising agent  \nHint: Consider the electronic configuration of X (atomic number 12) and its oxidation state in XO₂."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "2",
+   "question": "Which of the following species is isoelectronic with N³⁻ and arranged in the same order of increasing nuclear charge?",
+   "options": [
+     "(A) O²⁻, F⁻, Na⁺",
+     "(B) Na⁺, O²⁻, F⁻",
+     "(C) F⁻, O²⁻, Na⁺",
+     "(D) O²⁻, Na⁺, F⁻  \nHint: Check number of electrons and arrange based on atomic number."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "3",
+   "question": "A compound contains 25% hydrogen, 25% carbon and 50% oxygen by mass. If the relative molecular mass is 32 g/mol, what is the empirical formula of the compound?",
+   "options": [
+     "(A) C₂H₂O₂",
+     "(B) CHO",
+     "(C) CH₄O₂",
+     "(D) C₂H₄O  \nHint: Find mole ratios using the given percentages and atomic masses."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "4",
+   "question": "Which among the following pairs have identical bond order, but different number of electrons?",
+   "options": [
+     "(A) O₂⁻ and N₂",
+     "(B) O₂ and CO",
+     "(C) N₂⁺ and NO",
+     "(D) NO⁺ and CN⁻  \nHint: Bond order depends on total electrons and the molecular orbital configuration."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "5",
+   "question": "The number of protons, neutrons, and electrons in",
+   "options": [
+     "(A) ²⁵Mg¹²",
+     "(B) ²⁵Na¹²",
+     "(C) ²⁵Al¹³",
+     "(D) ²⁵Mg¹³  \nHint: Atomic number = number of protons, Mass number = protons + neutrons."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "6",
+   "question": "If the electronic configuration of an element X is [Ne]3s²3p³, which property is most likely exhibited by X?",
+   "options": [
+     "(A) Highest oxidising power in its group",
+     "(B) Formation of maximum covalent bonds up to three",
+     "(C) Smallest atomic size in its period",
+     "(D) Strong tendency to lose electrons  \nHint: 3s²3p³ corresponds to group 15 (Nitrogen family)."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "7",
+   "question": "Which of the following is a correct statement about the periodic trend in the ionization enthalpy?",
+   "options": [
+     "(A) Increases down the group due to increased atomic size",
+     "(B) Decreases across a period due to decrease in atomic radius",
+     "(C) Increases across a period due to increasing nuclear charge",
+     "(D) Remains constant along a period  \nHint: Consider how nuclear charge and atomic size affect ionization energy."
+   ],
+   "Hint": ""
+ },
+ {
+   "id": "8",
+   "question": "Which combination of the following molecules is a redox pair?",
+   "options": [
+     "(A) Cl₂/Cl⁻",
+     "(B) HCl/H₂",
+     "(C) CH₄/CO₂",
+     "(D) H₂O/O₂  \nHint: Redox pairs have members which differ by one or more electrons due to oxidation and reduction processes."
+   ],
+   "Hint": ""
+ }
+]
+

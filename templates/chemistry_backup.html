@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemistry</title>
+
+</head>
+<body>
+<h1>(CHEMISTRY TEST)</h1>
+
+   <div class="container">
+       <h1>Welcome to Chemistry Questions</h1>
+   </div>
+<div class="container">
+   <h1>AI generated Chemistry (Sample Paper) 📝</h1>
+
+
+   {% for q in questions %}
+   <div class="question-block">
+       <h4>Question {{ q.id }}:</h4>
+       <p>{{ q.question }}</p>
+
+
+       <ol>
+           {% for option in q.options %}
+           <li>{{ option }}</li>
+           {% endfor %}
+       </ol>
+
+
+       <button class="answer-btn" onclick="toggleAnswer({{ q.id }})">Show Answer</button>
+
+
+       <div id="answer-{{ q.id }}" class="answer-div">
+           <strong>Correct Answer:</strong> {{ q.answer }}
+       </div>
+   </div>
+   {% endfor %}
+</div>
+
+
+
+
+
+
+</>
+</html>
