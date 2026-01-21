@@ -6,7 +6,7 @@ import os
 
 
 # --- Configuration ---
-API_KEY = "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"
+git
 API_URL = "https://api.openai.com/v1/chat/completions"
 
 
